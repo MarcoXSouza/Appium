@@ -11,7 +11,7 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class DriverFactory {
 
-	private AndroidDriver<?> driver;
+	private static AndroidDriver<?> driver;
 
 	@SuppressWarnings("rawtypes")
 	public static AndroidDriver iniciaDriver(AndroidDriver driver)
@@ -32,7 +32,7 @@ public class DriverFactory {
 		return driver;
 	}
 	
-	public void fechaDriver(){
+	public static void fechaDriver(){
 		if (driver != null) {
 			driver.close();
 			driver = null;

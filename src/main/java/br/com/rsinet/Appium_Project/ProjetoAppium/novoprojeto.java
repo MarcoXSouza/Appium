@@ -2,10 +2,11 @@ package br.com.rsinet.Appium_Project.ProjetoAppium;
 
 import java.net.MalformedURLException;
 
-import org.openqa.selenium.By;
-
+import br.com.rsinet.Appium_Project.PageObject.CadastroPage;
 import br.com.rsinet.Appium_Project.utilitys.DriverFactory;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.touch.offset.PointOption;
 
 public class novoprojeto {
 
@@ -14,29 +15,23 @@ public class novoprojeto {
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
 		driver = DriverFactory.iniciaDriver(driver);
 
-//		CadastroPage.iniciaAplicativo.click();
-//		CadastroPage.clicaOpcoes.click();
-//		CadastroPage.clicaLogin.click();
-//		CadastroPage.novaConta.click();
-//		CadastroPage.
-		
-		driver.findElement(By.id("com.Advantage.aShopping:id/imageViewMenu")).click();
-		driver.findElement(By.id("com.Advantage.aShopping:id/linearLayoutLogin")).click();
-		driver.findElement(By.id("com.Advantage.aShopping:id/textViewSingUpToday")).click();
+		CadastroPage.clicaOpcoes(driver).click();
+		CadastroPage.clicaLogIn(driver).click();
+		CadastroPage.clicaNovaConta(driver).click();
+		CadastroPage.nome(driver).click();
+		CadastroPage.nome(driver).sendKeys("Marcos");
 
-		
-	
-		driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.TextView\r\n")).click();
-		driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.TextView\r\n")).sendKeys("Marcos");
-		//		Confirmar Senha
-		driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[4]/android.widget.RelativeLayout/android.widget.TextView\r\n")).click();
-//		driver.findElement(By.id("com.Advantage.aShopping:id/imageViewMenu")).click();
-//		driver.findElement(By.id("com.Advantage.aShopping:id/imageViewMenu")).click();
-//		WebElement element = driver.findElement(By.className("android.widget.EditText"));
-//
-//		element.sendKeys("moto g8" + Keys.ENTER);
-//		driver.findElement(By.id("com.android.vending:id/suggest_text")).click();
+		CadastroPage.email(driver).sendKeys("Marcos@email.com");
+
+		DriverFactory.fechaDriver();
 
 	}
 
+	
 }
+
+//		TouchAction actions = new TouchAction((PerformsTouchActions) driver);
+//		actions.tap(PointOption.point(998, 1713)).perform();
+//		KeyEvent event = new KeyEvent();
+//		event.withKey(AndroidKey.ENTER);
+//		CadastroPage.email(driver).click();
