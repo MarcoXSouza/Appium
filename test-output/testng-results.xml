@@ -2,16 +2,16 @@
 <testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="51" started-at="2020-01-30T15:09:36 BRT" finished-at="2020-01-30T15:09:36 BRT">
+  <suite name="Default suite" duration-ms="47" started-at="2020-01-31T22:37:48 BRT" finished-at="2020-01-31T22:37:48 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="51" started-at="2020-01-30T15:09:36 BRT" finished-at="2020-01-30T15:09:36 BRT">
+    <test name="Default test" duration-ms="47" started-at="2020-01-31T22:37:48 BRT" finished-at="2020-01-31T22:37:48 BRT">
       <class name="br.com.rsinet.Appium_Project.ProjetoAppium.AppTest">
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.AppTest@c46bcd4]" name="afterMethod" is-config="true" duration-ms="5" started-at="2020-01-30T15:09:36 BRT" finished-at="2020-01-30T15:09:36 BRT">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.AppTest@c46bcd4]" name="afterMethod" is-config="true" duration-ms="5" started-at="2020-01-31T22:37:48 BRT" finished-at="2020-01-31T22:37:48 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="FAIL" signature="beforeMethod()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.AppTest@c46bcd4]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2020-01-30T15:09:36 BRT" finished-at="2020-01-30T15:09:36 BRT">
+        <test-method status="FAIL" signature="beforeMethod()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.AppTest@c46bcd4]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2020-01-31T22:37:48 BRT" finished-at="2020-01-31T22:37:48 BRT">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -55,7 +55,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="t()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.AppTest@c46bcd4]" name="t" duration-ms="0" started-at="2020-01-30T15:09:36 BRT" finished-at="2020-01-30T15:09:36 BRT">
+        <test-method status="SKIP" signature="t()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.AppTest@c46bcd4]" name="t" duration-ms="0" started-at="2020-01-31T22:37:48 BRT" finished-at="2020-01-31T22:37:48 BRT">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException

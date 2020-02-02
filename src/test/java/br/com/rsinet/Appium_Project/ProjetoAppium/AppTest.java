@@ -1,7 +1,5 @@
 package br.com.rsinet.Appium_Project.ProjetoAppium;
 
-import java.io.File;
-
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeMethod;
@@ -16,9 +14,9 @@ public class AppTest {
 	
 	@BeforeMethod
 	public void beforeMethod() {
-	File classPathRoot = new File(System.getProperty("User.dir"));
-	File appDir = new File(classPathRoot, "/Apps/Amazon/");
-	File app = new File(appDir, "in.amazon.mShop.android.shopping.apk");
+//	File classPathRoot = new File(System.getProperty("User.dir"));
+//	File appDir = new File(classPathRoot, "/Apps/Amazon/");
+//	File app = new File(appDir, "in.amazon.mShop.android.shopping.apk");
 	DesiredCapabilities cap = new DesiredCapabilities();
 	cap.setCapability(CapabilityType.BROWSER_NAME, "");
 	cap.setCapability("deviceName", "AOSP on IA Emulator");
