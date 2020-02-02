@@ -6,8 +6,7 @@ import br.com.rsinet.Appium_Project.PageObject.BuscaPage;
 import br.com.rsinet.Appium_Project.utilitys.DriverFactory;
 import io.appium.java_client.AppiumDriver;
 
-public class Busca 
-{
+public class Busca {
     @SuppressWarnings("rawtypes")
 	private static AppiumDriver driver;
 
