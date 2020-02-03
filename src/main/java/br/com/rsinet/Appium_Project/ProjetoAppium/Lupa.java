@@ -10,20 +10,20 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class Lupa {
-private static AppiumDriver<?> driver;
-		
-@SuppressWarnings("rawtypes")
-public static void main(String[] args) throws MalformedURLException {
-	driver =  DriverFactory.iniciaDriver(driver);
-	TouchAction actions = new TouchAction((PerformsTouchActions) driver);
+	public static AppiumDriver<?> driver;
 
-	
-	LupaPage.clicaLupa(driver).click();
-	LupaPage.clicaLupa(driver).sendKeys("tablet");		
-	actions.tap(PointOption.point(998, 1713)).perform();
-	LupaPage.clicaItem(driver).click();
+	@SuppressWarnings("rawtypes")
+	public static void main(String[] args) throws MalformedURLException {
+		driver = DriverFactory.iniciaDriver(driver);
 
-	
-	
-}
+		TouchAction actions = new TouchAction((PerformsTouchActions) driver);
+		LupaPage.clicaLupa(driver).click();
+		LupaPage.clicaLupa(driver).sendKeys("tablet");
+		actions.tap(PointOption.point(998, 1713)).perform();
+		LupaPage.clicaItem(driver).click();
+		driver.navigate().back();
+		driver.navigate().back();
+
+	}
+
 }
