@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.com.rsinet.Appium_Project.ProjetoAppium.AppTest">
+      <class name="br.com.rsinet.Appium_Project.ProjetoAppium.Lupa">
         <methods>
           <include name="afterMethod"/>
-          <include name="t"/>
+          <include name="LupaFalha"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- br.com.rsinet.Appium_Project.ProjetoAppium.AppTest -->
+      </class> <!-- br.com.rsinet.Appium_Project.ProjetoAppium.Lupa -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
