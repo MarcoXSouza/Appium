@@ -8,10 +8,10 @@ import org.testng.annotations.Test;
 
 import br.com.rsinet.Appium_Project.PageObject.BuscaPage;
 import br.com.rsinet.Appium_Project.utilitys.DriverFactory;
-import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 
-public class Busca {
-	private static AppiumDriver<?> driver;
+public class BuscaTest {
+	private static AndroidDriver<?> driver;
 
 	@BeforeClass
 	public void beforeMethod() throws MalformedURLException {
@@ -23,16 +23,16 @@ public class Busca {
 		DriverFactory.fechaDriver();
 	}
 
-	@Test (priority = 1)
+	@Test(priority = 1)
 	public void BuscaSucesso() {
 		BuscaPage.escolheCategoria(driver).click();
-    	BuscaPage.escolheItem(driver).click();
+		BuscaPage.escolheItem(driver).click();
 		driver.navigate().back();
 		driver.navigate().back();
-		
+
 	}
 
-	@Test (priority = 2)
+	@Test(priority = 2)
 	public void BuscaFalha() {
 
 	}

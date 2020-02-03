@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15478" started-at="2020-02-03T00:03:47 BRT" finished-at="2020-02-03T00:04:03 BRT">
+  <suite name="Default suite" duration-ms="16543" started-at="2020-02-03T10:39:06 BRT" finished-at="2020-02-03T10:39:22 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15478" started-at="2020-02-03T00:03:47 BRT" finished-at="2020-02-03T00:04:03 BRT">
-      <class name="br.com.rsinet.Appium_Project.ProjetoAppium.Lupa">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.Lupa@436e852b]" name="beforeMethod" is-config="true" duration-ms="7010" started-at="2020-02-03T00:03:48 BRT" finished-at="2020-02-03T00:03:55 BRT">
+    <test name="Default test" duration-ms="16543" started-at="2020-02-03T10:39:06 BRT" finished-at="2020-02-03T10:39:22 BRT">
+      <class name="br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@a74868d]" name="beforeMethod" is-config="true" duration-ms="11347" started-at="2020-02-03T10:39:06 BRT" finished-at="2020-02-03T10:39:17 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="LupaSucesso()[pri:1, instance:br.com.rsinet.Appium_Project.ProjetoAppium.Lupa@436e852b]" name="LupaSucesso" duration-ms="5561" started-at="2020-02-03T00:03:55 BRT" finished-at="2020-02-03T00:04:00 BRT">
+        <test-method status="PASS" signature="BuscaSucesso()[pri:1, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@a74868d]" name="BuscaSucesso" duration-ms="5155" started-at="2020-02-03T10:39:17 BRT" finished-at="2020-02-03T10:39:22 BRT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LupaSucesso -->
-        <test-method status="PASS" signature="LupaFalha()[pri:2, instance:br.com.rsinet.Appium_Project.ProjetoAppium.Lupa@436e852b]" name="LupaFalha" duration-ms="2867" started-at="2020-02-03T00:04:00 BRT" finished-at="2020-02-03T00:04:03 BRT">
+        </test-method> <!-- BuscaSucesso -->
+        <test-method status="PASS" signature="BuscaFalha()[pri:2, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@a74868d]" name="BuscaFalha" duration-ms="2" started-at="2020-02-03T10:39:22 BRT" finished-at="2020-02-03T10:39:22 BRT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LupaFalha -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.Lupa@436e852b]" name="afterMethod" is-config="true" duration-ms="1" started-at="2020-02-03T00:04:03 BRT" finished-at="2020-02-03T00:04:03 BRT">
+        </test-method> <!-- BuscaFalha -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@a74868d]" name="afterMethod" is-config="true" duration-ms="1" started-at="2020-02-03T10:39:22 BRT" finished-at="2020-02-03T10:39:22 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- br.com.rsinet.Appium_Project.ProjetoAppium.Lupa -->
+      </class> <!-- br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

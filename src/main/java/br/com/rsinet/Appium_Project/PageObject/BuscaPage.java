@@ -7,7 +7,7 @@ import io.appium.java_client.AppiumDriver;
 
 public class BuscaPage {
 
-	public static WebElement element = null;
+	public static WebElement element;
 
 	@SuppressWarnings("rawtypes")
 	public static WebElement escolheCategoria(AppiumDriver driver) {

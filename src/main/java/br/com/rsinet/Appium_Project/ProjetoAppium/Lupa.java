@@ -4,13 +4,13 @@ import java.net.MalformedURLException;
 
 import br.com.rsinet.Appium_Project.PageObject.LupaPage;
 import br.com.rsinet.Appium_Project.utilitys.DriverFactory;
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class Lupa {
-	public static AppiumDriver<?> driver;
+	public static AndroidDriver<?> driver;
 
 	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) throws MalformedURLException {

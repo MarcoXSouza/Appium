@@ -7,15 +7,14 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 public class DriverFactory {
 
-	private static AppiumDriver<?> driver;
+	private static AndroidDriver<?> driver;
 
 	@SuppressWarnings("rawtypes")
-	public static AppiumDriver<?> iniciaDriver(AppiumDriver driver)
+	public static AndroidDriver<?> iniciaDriver(AndroidDriver driver)
 			throws MalformedURLException {
 		if (driver == null) {
 			DesiredCapabilities cap = new DesiredCapabilities();
