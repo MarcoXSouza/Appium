@@ -11,6 +11,7 @@ import br.com.rsinet.Appium_Project.utilitys.DriverFactory;
 import io.appium.java_client.android.AndroidDriver;
 
 public class BuscaTest {
+
 	private static AndroidDriver<?> driver;
 
 	@BeforeClass
@@ -20,20 +21,15 @@ public class BuscaTest {
 
 	@AfterClass
 	public void afterMethod() {
-		DriverFactory.fechaDriver();
+//		DriverFactory.fechaDriver();
 	}
 
-	@Test(priority = 1)
+	@Test
 	public void BuscaSucesso() {
 		BuscaPage.escolheCategoria(driver).click();
 		BuscaPage.escolheItem(driver).click();
-		driver.navigate().back();
-		driver.navigate().back();
-
-	}
-
-	@Test(priority = 2)
-	public void BuscaFalha() {
+//		driver.navigate().back();
+//		driver.navigate().back();
 
 	}
 

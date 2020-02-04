@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import io.appium.java_client.android.AndroidDriver;
-
 public class CadastroPage {
 	public static WebElement element = null;
 
@@ -101,9 +99,13 @@ public class CadastroPage {
 		return element;
 	}
 
-	public static WebElement registra(AndroidDriver<?> driver) {
+	public static WebElement registra(WebDriver driver) {
 		element = driver.findElement(By.id("com.Advantage.aShopping:id/buttonRegister"));
 		return element;
+	}
+	
+	public static String validaCadastro(WebDriver driver) {
+		return driver.findElement(By.id("com.Advantage.aShopping:id/textViewMenuUser")).getText();
 	}
 
 }

@@ -2,11 +2,14 @@ package br.com.rsinet.Appium_Project.ProjetoAppium;
 
 import java.net.MalformedURLException;
 
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import br.com.rsinet.Appium_Project.PageObject.LupaPage;
+import br.com.rsinet.Appium_Project.utilitys.Constantes;
 import br.com.rsinet.Appium_Project.utilitys.DriverFactory;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
@@ -17,37 +20,39 @@ public class LupaTest {
 	private static AndroidDriver<?> driver;
 
 	@BeforeClass
-	public void beforeMethod() throws MalformedURLException {
+	public void beforeClass() throws MalformedURLException {
 		driver = DriverFactory.iniciaDriver(driver);
 	}
 
 	@AfterClass
-	public void afterMethod() {
+	public void afterClass() {
 		DriverFactory.fechaDriver();
 	}
 
 	@SuppressWarnings("rawtypes")
-	@Test (priority = 1)
+	@Test 
 	public void LupaSucesso() {
 		TouchAction actions = new TouchAction((PerformsTouchActions) driver);
 		LupaPage.clicaLupa(driver).click();
-		LupaPage.clicaLupa(driver).sendKeys("tablet");		
+		LupaPage.clicaLupa(driver).sendKeys(Constantes.produto);		
 		actions.tap(PointOption.point(998, 1713)).perform();
 		LupaPage.clicaItem(driver).click();
+		System.out.println(LupaPage.validaProduto(driver));
+		Assert.assertTrue(LupaPage.validaProduto(driver).equals(Constantes.produto));
 		driver.navigate().back();
 		driver.navigate().back();
 		
 	}
 
-	
 	@SuppressWarnings("rawtypes")
-	@Test (priority = 2)
+	@Test 
 	public void LupaFalha() {
 		TouchAction actions = new TouchAction((PerformsTouchActions) driver);
 		LupaPage.clicaLupa(driver).click();
-		LupaPage.clicaLupa(driver).sendKeys("Bola");		
+		LupaPage.clicaLupa(driver).sendKeys("bicicleta");		
 		actions.tap(PointOption.point(998, 1713)).perform();
-
+		String mensagem = driver.findElement(By.id("com.Advantage.aShopping:id/textViewNoProductsToShow")).getText();
+		Assert.assertFalse(mensagem.equals("bicicleta"));
 	}
 
 }

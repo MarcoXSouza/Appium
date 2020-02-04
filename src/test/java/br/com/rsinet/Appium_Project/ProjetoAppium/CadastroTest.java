@@ -3,6 +3,7 @@ package br.com.rsinet.Appium_Project.ProjetoAppium;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -50,7 +51,7 @@ public class CadastroTest {
 		CadastroPage.confirmarSenha(driver).sendKeys(Constantes.senha);
 		actions.tap(PointOption.point(998, 1713)).perform();
 
-		CadastroPage.primeiroNome(driver).sendKeys(Constantes.nome);
+		CadastroPage.primeiroNome(driver).sendKeys("MArcos");
 		actions.tap(PointOption.point(998, 1713)).perform();
 
 		CadastroPage.ultimoNome(driver).click();
@@ -80,8 +81,13 @@ public class CadastroTest {
 		actions.tap(PointOption.point(998, 1713)).perform();
 		actions.press(PointOption.point(1031, 1717)).moveTo(PointOption.point(1016, 604)).release().perform();
 
-
 		CadastroPage.registra(driver).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+		CadastroPage.clicaOpcoes(driver).click();
+
+		Assert.assertTrue(CadastroPage.validaCadastro(driver).equals(Constantes.nome));
+
 	}
 
 }
