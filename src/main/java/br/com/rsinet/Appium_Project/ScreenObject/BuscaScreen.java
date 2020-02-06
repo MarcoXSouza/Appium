@@ -1,10 +1,10 @@
-package br.com.rsinet.Appium_Project.PageObject;
+package br.com.rsinet.Appium_Project.ScreenObject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class BuscaPage {
+public class BuscaScreen {
 
 	public static WebElement element = null;
 

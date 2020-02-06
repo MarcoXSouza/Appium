@@ -7,10 +7,9 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import br.com.rsinet.Appium_Project.PageObject.LupaPage;
+import br.com.rsinet.Appium_Project.ScreenObject.LupaScreen;
 import br.com.rsinet.Appium_Project.utilitys.Actions;
 import br.com.rsinet.Appium_Project.utilitys.Constantes;
 import br.com.rsinet.Appium_Project.utilitys.DriverFactory;
@@ -28,27 +27,25 @@ public class LupaTest {
 	public void finalizaTeste() throws IOException, InterruptedException {
 		SnapShot.takeSnapShot("LupaSucesso", driver);
 		DriverFactory.fechaDriver();
-//		driver.quit();
 
 	}
 
 	@Test
-	public void LupaSucesso() throws IOException, InterruptedException {
-		LupaPage.clicaLupa(driver).click();
-		LupaPage.clicaLupa(driver).sendKeys(Constantes.produto);
+	public void LupaSucesso() {
+		LupaScreen.clicaLupa(driver).click();
+		LupaScreen.clicaLupa(driver).sendKeys(Constantes.produto);
 		Actions.enter(driver);
-		LupaPage.clicaItem(driver).click();
-		Assert.assertTrue(LupaPage.validaProduto(driver).equals(Constantes.produto));
+		LupaScreen.clicaItem(driver).click();
+		Assert.assertTrue(LupaScreen.validaProduto(driver).equals(Constantes.produto));
 
 	}
 
 	@Test
-	public void LupaFalha() throws IOException, InterruptedException {
-		LupaPage.clicaLupa(driver).click();
-		LupaPage.clicaLupa(driver).sendKeys("bicicleta");
+	public void LupaFalha() {
+		LupaScreen.clicaLupa(driver).click();
+		LupaScreen.clicaLupa(driver).sendKeys("bicicleta");
 		Actions.enter(driver);
-		String mensagem = driver.findElement(By.id("com.Advantage.aShopping:id/textViewNoProductsToShow")).getText();
-		Assert.assertFalse(mensagem.equals("bicicleta"));
+		Assert.assertFalse(LupaScreen.produtoInexistente(driver).equals("bicicleta"));
 
 	}
 

@@ -1,10 +1,10 @@
-package br.com.rsinet.Appium_Project.PageObject;
+package br.com.rsinet.Appium_Project.ScreenObject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LupaPage {
+public class LupaScreen {
 	public static WebElement element = null;
 
 	public static WebElement clicaLupa(WebDriver driver) {
@@ -21,6 +21,10 @@ public class LupaPage {
 	
 	public static String validaProduto(WebDriver driver) {
 		return driver.findElement(By.id("com.Advantage.aShopping:id/textViewProductName")).getText();
+		
+	}
+	public static String produtoInexistente(WebDriver driver) {
+		return driver.findElement(By.id("com.Advantage.aShopping:id/textViewNoProductsToShow")).getText();
 		
 	}
 

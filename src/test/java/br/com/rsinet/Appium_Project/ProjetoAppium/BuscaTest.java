@@ -7,7 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
-import br.com.rsinet.Appium_Project.PageObject.BuscaPage;
+import br.com.rsinet.Appium_Project.ScreenObject.BuscaScreen;
 import br.com.rsinet.Appium_Project.utilitys.DriverFactory;
 
 public class BuscaTest {
@@ -21,16 +21,13 @@ public class BuscaTest {
 
 	@After
 	public void afterMethod() {
-//		DriverFactory.fechaDriver();
+		DriverFactory.fechaDriver();
 	}
 
 	@Test
 	public void BuscaSucesso() {
-		BuscaPage.escolheCategoria(driver).click();
-		BuscaPage.escolheItem(driver).click();
-//		driver.navigate().back();
-//		driver.navigate().back();
-
+		BuscaScreen.escolheCategoria(driver).click();
+		BuscaScreen.escolheItem(driver).click();
 	}
 
 }
