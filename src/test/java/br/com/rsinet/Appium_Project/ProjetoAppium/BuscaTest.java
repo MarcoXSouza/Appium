@@ -2,24 +2,24 @@ package br.com.rsinet.Appium_Project.ProjetoAppium;
 
 import java.net.MalformedURLException;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.Appium_Project.PageObject.BuscaPage;
 import br.com.rsinet.Appium_Project.utilitys.DriverFactory;
-import io.appium.java_client.android.AndroidDriver;
 
 public class BuscaTest {
 
-	private static AndroidDriver<?> driver;
+	private static WebDriver driver;
 
-	@BeforeClass
+	@Before
 	public void beforeMethod() throws MalformedURLException {
 		driver = DriverFactory.iniciaDriver(driver);
 	}
 
-	@AfterClass
+	@After
 	public void afterMethod() {
 //		DriverFactory.fechaDriver();
 	}

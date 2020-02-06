@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11934" started-at="2020-02-04T11:59:29 BRT" finished-at="2020-02-04T11:59:41 BRT">
+  <suite name="Default suite" duration-ms="10" started-at="2020-02-05T23:38:45 BRT" finished-at="2020-02-05T23:38:45 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11934" started-at="2020-02-04T11:59:29 BRT" finished-at="2020-02-04T11:59:41 BRT">
-      <class name="br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@a74868d]" name="beforeMethod" is-config="true" duration-ms="7359" started-at="2020-02-04T11:59:29 BRT" finished-at="2020-02-04T11:59:37 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="BuscaSucesso()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@a74868d]" name="BuscaSucesso" duration-ms="4535" started-at="2020-02-04T11:59:37 BRT" finished-at="2020-02-04T11:59:41 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BuscaSucesso -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@a74868d]" name="afterMethod" is-config="true" duration-ms="1" started-at="2020-02-04T11:59:41 BRT" finished-at="2020-02-04T11:59:41 BRT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest -->
+    <test name="Default test" duration-ms="10" started-at="2020-02-05T23:38:45 BRT" finished-at="2020-02-05T23:38:45 BRT">
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

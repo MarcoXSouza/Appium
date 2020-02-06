@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class Constantes {
 	
+	
+	
 	public static String getNome(int letras) {
 		Random quantidadeDeLetras = new Random();
 		int index;
@@ -17,7 +19,7 @@ public class Constantes {
 	return palavraRamdom;
 	}
 
-	public static String nome = "EbuFOuL";
+	public static String nome = "AXG9guZ";
 	public static String email = "marcos@email.com";
 	public static String senha = "123Aqwer";
 	public static String ultimoNome = "Xavier";
@@ -28,6 +30,7 @@ public class Constantes {
 	public static String cep = "06246-040";
 	
 	public static String produto = "HP ELITEPAD 1000 G2 TABLET";
+	public static String file = "src\\main\\java\\resources\\ArquivoExcel.xlsx";
 	
 	public static void main(String[] args) {
 		System.out.println(getNome(7));

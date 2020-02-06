@@ -5,8 +5,9 @@
     <classes>
       <class name="br.com.rsinet.Appium_Project.ProjetoAppium.LupaTest">
         <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
+          <include name="finalizaTeste"/>
+          <include name="iniciaAplicativo"/>
+          <include name="LupaFalha"/>
           <include name="LupaSucesso"/>
         </methods>
       </class> <!-- br.com.rsinet.Appium_Project.ProjetoAppium.LupaTest -->

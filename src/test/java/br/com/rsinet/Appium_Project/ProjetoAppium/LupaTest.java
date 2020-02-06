@@ -1,58 +1,55 @@
 package br.com.rsinet.Appium_Project.ProjetoAppium;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.By;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.Appium_Project.PageObject.LupaPage;
+import br.com.rsinet.Appium_Project.utilitys.Actions;
 import br.com.rsinet.Appium_Project.utilitys.Constantes;
 import br.com.rsinet.Appium_Project.utilitys.DriverFactory;
-import io.appium.java_client.PerformsTouchActions;
-import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.touch.offset.PointOption;
+import br.com.rsinet.Appium_Project.utilitys.SnapShot;
 
 public class LupaTest {
-	private static AndroidDriver<?> driver;
+	private static WebDriver driver;
 
-	@BeforeClass
-	public void beforeClass() throws MalformedURLException {
+	@Before
+	public void iniciaAplicativo() throws MalformedURLException {
 		driver = DriverFactory.iniciaDriver(driver);
 	}
 
-	@AfterClass
-	public void afterClass() {
+	@After
+	public void finalizaTeste() throws IOException, InterruptedException {
+		SnapShot.takeSnapShot("LupaSucesso", driver);
 		DriverFactory.fechaDriver();
+//		driver.quit();
+
 	}
 
-	@SuppressWarnings("rawtypes")
-	@Test 
-	public void LupaSucesso() {
-		TouchAction actions = new TouchAction((PerformsTouchActions) driver);
+	@Test
+	public void LupaSucesso() throws IOException, InterruptedException {
 		LupaPage.clicaLupa(driver).click();
-		LupaPage.clicaLupa(driver).sendKeys(Constantes.produto);		
-		actions.tap(PointOption.point(998, 1713)).perform();
+		LupaPage.clicaLupa(driver).sendKeys(Constantes.produto);
+		Actions.enter(driver);
 		LupaPage.clicaItem(driver).click();
-		System.out.println(LupaPage.validaProduto(driver));
 		Assert.assertTrue(LupaPage.validaProduto(driver).equals(Constantes.produto));
-		driver.navigate().back();
-		driver.navigate().back();
-		
+
 	}
 
-	@SuppressWarnings("rawtypes")
-	@Test 
-	public void LupaFalha() {
-		TouchAction actions = new TouchAction((PerformsTouchActions) driver);
+	@Test
+	public void LupaFalha() throws IOException, InterruptedException {
 		LupaPage.clicaLupa(driver).click();
-		LupaPage.clicaLupa(driver).sendKeys("bicicleta");		
-		actions.tap(PointOption.point(998, 1713)).perform();
+		LupaPage.clicaLupa(driver).sendKeys("bicicleta");
+		Actions.enter(driver);
 		String mensagem = driver.findElement(By.id("com.Advantage.aShopping:id/textViewNoProductsToShow")).getText();
 		Assert.assertFalse(mensagem.equals("bicicleta"));
+
 	}
 
 }

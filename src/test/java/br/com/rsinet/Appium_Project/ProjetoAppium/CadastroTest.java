@@ -1,76 +1,75 @@
 package br.com.rsinet.Appium_Project.ProjetoAppium;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.Appium_Project.PageObject.CadastroPage;
+import br.com.rsinet.Appium_Project.utilitys.Actions;
 import br.com.rsinet.Appium_Project.utilitys.Constantes;
 import br.com.rsinet.Appium_Project.utilitys.DriverFactory;
-import io.appium.java_client.PerformsTouchActions;
-import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.touch.offset.PointOption;
+import br.com.rsinet.Appium_Project.utilitys.SnapShot;
 
 public class CadastroTest {
 
-	private static AndroidDriver<?> driver;
+	private static WebDriver driver;
 
-	@BeforeClass
+	@Before
 	public void beforeClass() throws MalformedURLException {
 		driver = DriverFactory.iniciaDriver(driver);
 	}
 
-	@AfterClass
-	public void afterClass() {
+	@After
+	public void afterClass() throws IOException, InterruptedException {
+		SnapShot.takeSnapShot("Cadastro", driver);
 		DriverFactory.fechaDriver();
 	}
 
-	@SuppressWarnings("rawtypes")
 	@Test
-	public void CadastroSucesso() throws MalformedURLException {
-		TouchAction actions = new TouchAction((PerformsTouchActions) DriverFactory.iniciaDriver(driver));
+	public void CadastroSucesso() throws MalformedURLException, InterruptedException {
 		CadastroPage.clicaOpcoes(driver).click();
 		CadastroPage.clicaLogIn(driver).click();
 		CadastroPage.clicaNovaConta(driver).click();
 
 		CadastroPage.nome(driver).click();
 		CadastroPage.nome(driver).sendKeys(Constantes.nome);
-		actions.tap(PointOption.point(998, 1713)).perform();
+		Actions.enter(driver);
 
 		CadastroPage.email(driver).sendKeys(Constantes.email);
-		actions.tap(PointOption.point(998, 1713)).perform();
+		Actions.enter(driver);
 
 		CadastroPage.senha(driver).sendKeys(Constantes.senha);
-		actions.tap(PointOption.point(998, 1713)).perform();
+		Actions.enter(driver);
 
 		CadastroPage.confirmarSenha(driver).sendKeys(Constantes.senha);
-		actions.tap(PointOption.point(998, 1713)).perform();
+		Actions.enter(driver);
 
 		CadastroPage.primeiroNome(driver).sendKeys("MArcos");
-		actions.tap(PointOption.point(998, 1713)).perform();
+		Actions.enter(driver);
 
 		CadastroPage.ultimoNome(driver).click();
 		CadastroPage.ultimoNome(driver).sendKeys(Constantes.ultimoNome);
-		actions.tap(PointOption.point(998, 1713)).perform();
+		Actions.enter(driver);
 
 		CadastroPage.telefone(driver).sendKeys(Constantes.telefone);
-		actions.tap(PointOption.point(998, 1713)).perform();
+		Actions.enter(driver);
 
 		CadastroPage.pais(driver).click();
 		CadastroPage.selecionarPais(driver).click();
 
 		CadastroPage.estado(driver).click();
 		CadastroPage.estado(driver).sendKeys(Constantes.estado);
-		actions.tap(PointOption.point(998, 1713)).perform();
+		Actions.enter(driver);
 
 		CadastroPage.endereco(driver).click();
 		CadastroPage.endereco(driver).sendKeys(Constantes.endereco);
-		actions.tap(PointOption.point(998, 1713)).perform();
+		Actions.enter(driver);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 		CadastroPage.cidade(driver).click();
@@ -78,15 +77,73 @@ public class CadastroTest {
 
 		CadastroPage.cep(driver).click();
 		CadastroPage.cep(driver).sendKeys(Constantes.cep);
-		actions.tap(PointOption.point(998, 1713)).perform();
-		actions.press(PointOption.point(1031, 1717)).moveTo(PointOption.point(1016, 604)).release().perform();
+		Actions.enter(driver);
+		Actions.scroll(driver);
+
+		CadastroPage.registra(driver).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		CadastroPage.clicaOpcoes(driver).click();
+
+		Assert.assertTrue(CadastroPage.validaCadastro(driver).equals(Constantes.nome));
+
+	}
+
+	@Test
+	public void CadastroFalha() throws MalformedURLException {
+		CadastroPage.clicaOpcoes(driver).click();
+		CadastroPage.clicaLogIn(driver).click();
+		CadastroPage.clicaNovaConta(driver).click();
+
+		CadastroPage.nome(driver).click();
+		CadastroPage.nome(driver).sendKeys("Marcos");
+		Actions.enter(driver);
+
+		CadastroPage.email(driver).sendKeys(Constantes.email);
+		Actions.enter(driver);
+
+		CadastroPage.senha(driver).sendKeys(Constantes.senha);
+		Actions.enter(driver);
+
+		CadastroPage.confirmarSenha(driver).sendKeys(Constantes.senha);
+		Actions.enter(driver);
+
+		CadastroPage.primeiroNome(driver).sendKeys("MArcos");
+		Actions.enter(driver);
+
+		CadastroPage.ultimoNome(driver).click();
+		CadastroPage.ultimoNome(driver).sendKeys(Constantes.ultimoNome);
+		Actions.enter(driver);
+
+		CadastroPage.telefone(driver).sendKeys(Constantes.telefone);
+		Actions.enter(driver);
+
+		CadastroPage.pais(driver).click();
+		CadastroPage.selecionarPais(driver).click();
+
+		CadastroPage.estado(driver).click();
+		CadastroPage.estado(driver).sendKeys(Constantes.estado);
+		Actions.enter(driver);
+
+		CadastroPage.endereco(driver).click();
+		CadastroPage.endereco(driver).sendKeys(Constantes.endereco);
+		Actions.enter(driver);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+		CadastroPage.cidade(driver).click();
+		CadastroPage.cidade(driver).sendKeys(Constantes.cidade);
+
+		CadastroPage.cep(driver).click();
+		CadastroPage.cep(driver).sendKeys(Constantes.cep);
+		Actions.enter(driver);
+		Actions.scroll(driver);
+		
 
 		CadastroPage.registra(driver).click();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 		CadastroPage.clicaOpcoes(driver).click();
 
-		Assert.assertTrue(CadastroPage.validaCadastro(driver).equals(Constantes.nome));
+		Assert.assertFalse(CadastroPage.validaCadastro(driver).equals(Constantes.nome));
 
 	}
 
