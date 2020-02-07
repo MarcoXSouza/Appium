@@ -20,4 +20,29 @@ public class BuscaScreen {
 		return element;
 	}
 
+	public static WebElement quantidade(WebDriver driver) {
+		element = driver.findElement(By.id("com.Advantage.aShopping:id/linearLayoutProductQuantity"));
+		return element;
+	}
+
+	public static WebElement adcQuantidade(WebDriver driver) {
+		element = driver.findElement(By.id("com.Advantage.aShopping:id/textViewProductQuantity"));
+		return element;
+	}
+
+	public static WebElement aplicar(WebDriver driver) {
+		element = driver.findElement(By.id("com.Advantage.aShopping:id/textViewApply"));
+		return element;
+	}
+
+	public static WebElement adicionarAoCarrinho(WebDriver driver) {
+		element = driver.findElement(By.id("com.Advantage.aShopping:id/buttonProductAddToCart"));
+		return element;
+	}
+
+	public static String confereCarrinho(WebDriver driver) {
+		return driver.findElement(By.id("com.Advantage.aShopping:id/textViewCartLength")).getText();
+
+	}
+
 }

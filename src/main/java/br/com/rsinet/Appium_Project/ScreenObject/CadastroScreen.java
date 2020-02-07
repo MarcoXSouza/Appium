@@ -7,16 +7,6 @@ import org.openqa.selenium.WebElement;
 public class CadastroScreen {
 	public static WebElement element = null;
 
-	public static WebElement clicaOpcoes(WebDriver driver) {
-		element = driver.findElement(By.id("com.Advantage.aShopping:id/imageViewMenu"));
-		return element;
-	}
-
-	public static WebElement clicaLogIn(WebDriver driver) {
-		element = driver.findElement(By.id("com.Advantage.aShopping:id/linearLayoutLogin"));
-		return element;
-	}
-
 	public static WebElement clicaNovaConta(WebDriver driver) {
 		element = driver.findElement(By.id("com.Advantage.aShopping:id/textViewSingUpToday"));
 		return element;
@@ -82,14 +72,13 @@ public class CadastroScreen {
 	}
 
 	public static WebElement endereco(WebDriver driver) {
-		element = driver.findElement(By.xpath(
-				"//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.EditText"));
+		element = driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.EditText"));
 		return element;
 	}
 
 	public static WebElement cidade(WebDriver driver) {
 		element = driver.findElement(By.xpath(
-				"//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.widget.EditText"));
+				"//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.RelativeLayout[1]/android.widget.EditText"));
 		return element;
 	}
 

@@ -19,7 +19,7 @@ public class Constantes {
 	return palavraRamdom;
 	}
 
-	public static String nome = "AXG9guZ";
+	public static String nome = "Q87Y4bI";
 	public static String email = "marcos@email.com";
 	public static String senha = "123Aqwer";
 	public static String ultimoNome = "Xavier";

@@ -10,22 +10,19 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.Appium_Project.ScreenObject.LupaScreen;
-import br.com.rsinet.Appium_Project.utilitys.Actions;
 import br.com.rsinet.Appium_Project.utilitys.Constantes;
 import br.com.rsinet.Appium_Project.utilitys.DriverFactory;
-import br.com.rsinet.Appium_Project.utilitys.SnapShot;
 
 public class LupaTest {
 	private static WebDriver driver;
 
 	@Before
 	public void iniciaAplicativo() throws MalformedURLException {
-		driver = DriverFactory.iniciaDriver(driver);
+		driver = DriverFactory.iniciaDriver();
 	}
 
 	@After
 	public void finalizaTeste() throws IOException, InterruptedException {
-		SnapShot.takeSnapShot("LupaSucesso", driver);
 		DriverFactory.fechaDriver();
 
 	}
@@ -34,7 +31,7 @@ public class LupaTest {
 	public void LupaSucesso() {
 		LupaScreen.clicaLupa(driver).click();
 		LupaScreen.clicaLupa(driver).sendKeys(Constantes.produto);
-		Actions.enter(driver);
+		LupaScreen.pesquisar(driver).click();
 		LupaScreen.clicaItem(driver).click();
 		Assert.assertTrue(LupaScreen.validaProduto(driver).equals(Constantes.produto));
 
@@ -44,7 +41,7 @@ public class LupaTest {
 	public void LupaFalha() {
 		LupaScreen.clicaLupa(driver).click();
 		LupaScreen.clicaLupa(driver).sendKeys("bicicleta");
-		Actions.enter(driver);
+		LupaScreen.pesquisar(driver).click();
 		Assert.assertFalse(LupaScreen.produtoInexistente(driver).equals("bicicleta"));
 
 	}

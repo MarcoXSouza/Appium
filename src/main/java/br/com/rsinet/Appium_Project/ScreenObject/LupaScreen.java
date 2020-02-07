@@ -28,4 +28,9 @@ public class LupaScreen {
 		
 	}
 
+	public static WebElement pesquisar(WebDriver driver) {
+element = driver.findElement(By.id("com.Advantage.aShopping:id/imageViewSearch"));
+		return element;
+	}
+
 }
