@@ -2,8 +2,13 @@ package br.com.rsinet.Appium_Project.utilitys;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
+import io.appium.java_client.android.AndroidDriver;
+
+import org.openqa.selenium.WebElement;
+import org.testng.ITestResult;
 public class Report {
 
 	private static ExtentHtmlReporter htmlReporter;
@@ -11,7 +16,7 @@ public class Report {
 	private static ExtentTest logger;
 
 	public static ExtentReports setExtent(String titulo, String nomeDoReport) {
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/target/Report.html");
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "//Report//Report.html");
 		htmlReporter.config().setDocumentTitle(titulo);
 		htmlReporter.config().setReportName(nomeDoReport);
 		
@@ -40,21 +45,20 @@ public class Report {
 		return logger;
 	}
 
-	/* Verifica se o teste passou, falhou ou pulou e tira screenshot */
-//	public static void tearDown(ITestResult result, ExtentTest test, AndroidDriver driver) throws Exception {
-//		String screenshotPath = SnapShot.takeSnapShot(driver);;
-//		if (result.getStatus() == ITestResult.FAILURE) {
-//			test.log(Status.FAIL, "Caso de teste falho: " + result.getName());
-//			test.log(Status.FAIL, "Caso de teste falho: " + result.getThrowable());
-//			test.addScreenCaptureFromPath(screenshotPath);
-//
-//		} else if (result.getStatus() == ITestResult.SKIP) {
-//			test.log(Status.SKIP, "Caso de teste pulado: " + result.getName());
-//			test.addScreenCaptureFromPath(screenshotPath);
-//
-//		} else if (result.getStatus() == ITestResult.SUCCESS) {
-//			test.log(Status.PASS, "Caso de teste passado com sucesso: " + result.getName());
-//			test.addScreenCaptureFromPath(screenshotPath);
-//		}
-//	}
+	public static void tearDown(ITestResult result, ExtentTest test, AndroidDriver<WebElement> driver) throws Exception {
+		String screenshotPath = SnapShot.takeSnapShot(driver, result.getName());
+		if (result.getStatus() == ITestResult.FAILURE) {
+			test.log(Status.FAIL, "Caso de teste falho: " + result.getName());
+			test.log(Status.FAIL, "Caso de teste falho: " + result.getThrowable());	
+			test.addScreenCaptureFromPath(screenshotPath);
+
+		} else if (result.getStatus() == ITestResult.SKIP) {
+			test.log(Status.SKIP, "Caso de teste pulado: " + result.getName());
+			test.addScreenCaptureFromPath(screenshotPath);
+
+		} else if (result.getStatus() == ITestResult.SUCCESS) {
+			test.log(Status.PASS, "Caso de teste passado com sucesso: " + result.getName());
+			test.addScreenCaptureFromPath(screenshotPath);
+		}
+	}
 }

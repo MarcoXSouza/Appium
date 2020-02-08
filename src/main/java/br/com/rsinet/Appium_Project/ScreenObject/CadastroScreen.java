@@ -4,8 +4,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import io.appium.java_client.PerformsTouchActions;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.offset.PointOption;
+
 public class CadastroScreen {
 	public static WebElement element = null;
+	
+	@SuppressWarnings("rawtypes")
+	public static void scroll(WebDriver driver) {
+		TouchAction actions = new TouchAction((PerformsTouchActions) driver);
+		actions.press(PointOption.point(1067, 1757)).moveTo(PointOption.point(1059, 155)).release().perform();
+		
+	}
 
 	public static WebElement clicaNovaConta(WebDriver driver) {
 		element = driver.findElement(By.id("com.Advantage.aShopping:id/textViewSingUpToday"));

@@ -19,15 +19,7 @@ public class Constantes {
 	return palavraRamdom;
 	}
 
-	public static String nome = "Q87Y4bI";
-	public static String email = "marcos@email.com";
-	public static String senha = "123Aqwer";
-	public static String ultimoNome = "Xavier";
-	public static String telefone = "9876543210";
-	public static String estado = "ES";
-	public static String endereco = "Rua Sao Marcos, 221";
-	public static String cidade = "Marrocos";
-	public static String cep = "06246-040";
+	
 	
 	public static String produto = "HP ELITEPAD 1000 G2 TABLET";
 	public static String file = "src\\main\\java\\resources\\ArquivoExcel.xlsx";

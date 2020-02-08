@@ -16,7 +16,7 @@ public class DriverFactory {
 	private static AndroidDriver<WebElement> driver;
 	private static DesiredCapabilities  cap;
 
-	public static WebDriver iniciaDriver() throws MalformedURLException {
+	public static AndroidDriver<WebElement> iniciaDriver() throws MalformedURLException {
 		if(driver == null) {
 			
 		cap = new DesiredCapabilities();
