@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.com.rsinet.Appium_Project.ProjetoAppium.CadastroTest">
+      <class name="br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest">
         <methods>
-          <include name="IniciaReport"/>
           <include name="fechaApp"/>
-          <include name="finalizaReport"/>
+          <include name="IniciaReport"/>
           <include name="iniciaApp"/>
-          <include name="CadastroSucesso"/>
+          <include name="finalizaReport"/>
+          <include name="BuscaFalha"/>
         </methods>
-      </class> <!-- br.com.rsinet.Appium_Project.ProjetoAppium.CadastroTest -->
+      </class> <!-- br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

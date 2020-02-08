@@ -64,8 +64,9 @@ public class BuscaTest {
 		LogInScreen.fazLogin(driver).click();
 		BuscaScreen.escolheCategoria(driver).click();
 		BuscaScreen.escolheItem(driver).click();
-
 		BuscaScreen.quantidade(driver).click();
+
+		BuscaScreen.adcQuantidade(driver).click();
 		BuscaScreen.adcQuantidade(driver).sendKeys("20");
 		BuscaScreen.aplicar(driver).click();
 		BuscaScreen.adicionarAoCarrinho(driver).click();

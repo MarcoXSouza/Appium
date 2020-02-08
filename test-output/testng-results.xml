@@ -2,58 +2,58 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25091" started-at="2020-02-07T22:20:32 BRT" finished-at="2020-02-07T22:20:57 BRT">
+  <suite name="Default suite" duration-ms="36896" started-at="2020-02-07T22:31:53 BRT" finished-at="2020-02-07T22:32:30 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25091" started-at="2020-02-07T22:20:32 BRT" finished-at="2020-02-07T22:20:57 BRT">
-      <class name="br.com.rsinet.Appium_Project.ProjetoAppium.LupaTest">
-        <test-method status="PASS" signature="IniciaReport()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.LupaTest@3cb1ffe6]" name="IniciaReport" is-config="true" duration-ms="86" started-at="2020-02-07T22:20:32 BRT" finished-at="2020-02-07T22:20:32 BRT">
+    <test name="Default test" duration-ms="36896" started-at="2020-02-07T22:31:53 BRT" finished-at="2020-02-07T22:32:30 BRT">
+      <class name="br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest">
+        <test-method status="PASS" signature="IniciaReport()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="IniciaReport" is-config="true" duration-ms="86" started-at="2020-02-07T22:31:53 BRT" finished-at="2020-02-07T22:31:53 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IniciaReport -->
-        <test-method status="PASS" signature="iniciaApp()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.LupaTest@3cb1ffe6]" name="iniciaApp" is-config="true" duration-ms="6906" started-at="2020-02-07T22:20:32 BRT" finished-at="2020-02-07T22:20:39 BRT">
+        <test-method status="PASS" signature="iniciaApp()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="iniciaApp" is-config="true" duration-ms="7340" started-at="2020-02-07T22:31:53 BRT" finished-at="2020-02-07T22:32:00 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iniciaApp -->
-        <test-method status="PASS" signature="LupaFalha()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.LupaTest@3cb1ffe6]" name="LupaFalha" duration-ms="4488" started-at="2020-02-07T22:20:39 BRT" finished-at="2020-02-07T22:20:43 BRT">
+        <test-method status="PASS" signature="BuscaFalha()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="BuscaFalha" duration-ms="15072" started-at="2020-02-07T22:32:00 BRT" finished-at="2020-02-07T22:32:15 BRT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LupaFalha -->
-        <test-method status="PASS" signature="fechaApp(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.LupaTest@3cb1ffe6]" name="fechaApp" is-config="true" duration-ms="652" started-at="2020-02-07T22:20:43 BRT" finished-at="2020-02-07T22:20:44 BRT">
+        </test-method> <!-- BuscaFalha -->
+        <test-method status="PASS" signature="fechaApp(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="fechaApp" is-config="true" duration-ms="836" started-at="2020-02-07T22:32:15 BRT" finished-at="2020-02-07T22:32:16 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LupaFalha status=SUCCESS method=LupaTest.LupaFalha()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.LupaTest@3cb1ffe6] output={null}]]]>
+                <![CDATA[[TestResult name=BuscaFalha status=SUCCESS method=BuscaTest.BuscaFalha()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fechaApp -->
-        <test-method status="PASS" signature="iniciaApp()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.LupaTest@3cb1ffe6]" name="iniciaApp" is-config="true" duration-ms="6362" started-at="2020-02-07T22:20:44 BRT" finished-at="2020-02-07T22:20:50 BRT">
+        <test-method status="PASS" signature="iniciaApp()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="iniciaApp" is-config="true" duration-ms="7794" started-at="2020-02-07T22:32:16 BRT" finished-at="2020-02-07T22:32:24 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iniciaApp -->
-        <test-method status="PASS" signature="LupaSucesso()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.LupaTest@3cb1ffe6]" name="LupaSucesso" duration-ms="5511" started-at="2020-02-07T22:20:50 BRT" finished-at="2020-02-07T22:20:56 BRT">
+        <test-method status="PASS" signature="BuscaSucesso()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="BuscaSucesso" duration-ms="3908" started-at="2020-02-07T22:32:24 BRT" finished-at="2020-02-07T22:32:28 BRT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LupaSucesso -->
-        <test-method status="PASS" signature="fechaApp(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.LupaTest@3cb1ffe6]" name="fechaApp" is-config="true" duration-ms="809" started-at="2020-02-07T22:20:56 BRT" finished-at="2020-02-07T22:20:57 BRT">
+        </test-method> <!-- BuscaSucesso -->
+        <test-method status="PASS" signature="fechaApp(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="fechaApp" is-config="true" duration-ms="1385" started-at="2020-02-07T22:32:28 BRT" finished-at="2020-02-07T22:32:29 BRT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LupaSucesso status=SUCCESS method=LupaTest.LupaSucesso()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.LupaTest@3cb1ffe6] output={null}]]]>
+                <![CDATA[[TestResult name=BuscaSucesso status=SUCCESS method=BuscaTest.BuscaSucesso()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fechaApp -->
-        <test-method status="PASS" signature="finalizaReport()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.LupaTest@3cb1ffe6]" name="finalizaReport" is-config="true" duration-ms="252" started-at="2020-02-07T22:20:57 BRT" finished-at="2020-02-07T22:20:57 BRT">
+        <test-method status="PASS" signature="finalizaReport()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="finalizaReport" is-config="true" duration-ms="447" started-at="2020-02-07T22:32:29 BRT" finished-at="2020-02-07T22:32:30 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaReport -->
-      </class> <!-- br.com.rsinet.Appium_Project.ProjetoAppium.LupaTest -->
+      </class> <!-- br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

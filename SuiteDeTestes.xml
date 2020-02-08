@@ -4,6 +4,8 @@
 	<test name="Test">
 		<classes>
 			<class name="br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest"/>
+			<class name="br.com.rsinet.Appium_Project.ProjetoAppium.CadastroTest"/>
+			<class name="br.com.rsinet.Appium_Project.ProjetoAppium.LupaTest"/>
 		</classes>
  </test>
 </suite>
