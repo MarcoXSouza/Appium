@@ -18,18 +18,20 @@ public class LupaScreen {
 				"//android.widget.RelativeLayout[@content-desc=\"Search\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[1]/android.widget.TextView[1]"));
 		return element;
 	}
-	
+
 	public static String validaProduto(WebDriver driver) {
 		return driver.findElement(By.id("com.Advantage.aShopping:id/textViewProductName")).getText();
-		
+
 	}
+
 	public static String produtoInexistente(WebDriver driver) {
-		return driver.findElement(By.id("com.Advantage.aShopping:id/textViewNoProductsToShow")).getText();
-		
+		return driver.findElement(
+				By.id("com.Advantage.aShopping:id/textViewNoProductsToShow")).getText();
+
 	}
 
 	public static WebElement pesquisar(WebDriver driver) {
-element = driver.findElement(By.id("com.Advantage.aShopping:id/imageViewSearch"));
+		element = driver.findElement(By.id("com.Advantage.aShopping:id/imageViewSearch"));
 		return element;
 	}
 

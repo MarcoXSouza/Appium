@@ -70,12 +70,6 @@ public class CadastroScreen {
 		return element;
 	}
 
-	public static WebElement selecionarPais(WebDriver driver) {
-		element = driver.findElement(By.xpath(
-				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[9]"));
-		return element;
-	}
-
 	public static WebElement estado(WebDriver driver) {
 		element = driver
 				.findElement(By.xpath("//*[@resource-id='com.Advantage.aShopping:id/AosEditTextState']/child::*[1]"));

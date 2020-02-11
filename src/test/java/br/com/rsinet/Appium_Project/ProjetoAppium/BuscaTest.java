@@ -50,22 +50,23 @@ public class BuscaTest {
 	@Test
 	public void BuscaSucesso() {
 		logger = Report.criaRelatorio("BuscaSucesso");
-		BuscaScreen.escolheCategoria(driver).click();
-		BuscaScreen.escolheItem(driver).click();
+		LogInScreen.scrollAndClick(driver, "LAPTOPS");
+		LogInScreen.scrollAndClick(driver, "HP CHROMEBOOK 14 G1(ENERGY STAR)");
+		Assert.assertTrue(BuscaScreen.verificaItem(driver).equals("HP CHROMEBOOK 14 G1(ENERGY STAR)"));
 	}
 
 	@Test
 	public void BuscaFalha() {
 		logger = Report.criaRelatorio("BuscaFalha");
+		
 		LogInScreen.clicaOpcoes(driver).click();
 		LogInScreen.clicaLogIn(driver).click();
-		LogInScreen.username(driver).sendKeys("martos");
+		LogInScreen.userName(driver).sendKeys("martos");
 		LogInScreen.password(driver).sendKeys("aBc123");
 		LogInScreen.fazLogin(driver).click();
-		BuscaScreen.escolheCategoria(driver).click();
-		BuscaScreen.escolheItem(driver).click();
+		LogInScreen.scrollAndClick(driver, "LAPTOPS");
+		LogInScreen.scrollAndClick(driver, "HP CHROMEBOOK 14 G1(ENERGY STAR)");
 		BuscaScreen.quantidade(driver).click();
-
 		BuscaScreen.adcQuantidade(driver).click();
 		BuscaScreen.adcQuantidade(driver).sendKeys("20");
 		BuscaScreen.aplicar(driver).click();

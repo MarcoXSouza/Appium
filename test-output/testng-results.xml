@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="36896" started-at="2020-02-07T22:31:53 BRT" finished-at="2020-02-07T22:32:30 BRT">
+  <suite name="Default suite" duration-ms="40708" started-at="2020-02-11T13:36:10 BRT" finished-at="2020-02-11T13:36:51 BRT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="36896" started-at="2020-02-07T22:31:53 BRT" finished-at="2020-02-07T22:32:30 BRT">
+    <test name="Default test" duration-ms="40708" started-at="2020-02-11T13:36:10 BRT" finished-at="2020-02-11T13:36:51 BRT">
       <class name="br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest">
-        <test-method status="PASS" signature="IniciaReport()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="IniciaReport" is-config="true" duration-ms="86" started-at="2020-02-07T22:31:53 BRT" finished-at="2020-02-07T22:31:53 BRT">
+        <test-method status="PASS" signature="IniciaReport()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="IniciaReport" is-config="true" duration-ms="83" started-at="2020-02-11T13:36:10 BRT" finished-at="2020-02-11T13:36:11 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IniciaReport -->
-        <test-method status="PASS" signature="iniciaApp()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="iniciaApp" is-config="true" duration-ms="7340" started-at="2020-02-07T22:31:53 BRT" finished-at="2020-02-07T22:32:00 BRT">
+        <test-method status="PASS" signature="iniciaApp()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="iniciaApp" is-config="true" duration-ms="8127" started-at="2020-02-11T13:36:11 BRT" finished-at="2020-02-11T13:36:19 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iniciaApp -->
-        <test-method status="PASS" signature="BuscaFalha()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="BuscaFalha" duration-ms="15072" started-at="2020-02-07T22:32:00 BRT" finished-at="2020-02-07T22:32:15 BRT">
+        <test-method status="PASS" signature="BuscaFalha()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="BuscaFalha" duration-ms="16384" started-at="2020-02-11T13:36:19 BRT" finished-at="2020-02-11T13:36:35 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BuscaFalha -->
-        <test-method status="PASS" signature="fechaApp(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="fechaApp" is-config="true" duration-ms="836" started-at="2020-02-07T22:32:15 BRT" finished-at="2020-02-07T22:32:16 BRT">
+        <test-method status="PASS" signature="fechaApp(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="fechaApp" is-config="true" duration-ms="772" started-at="2020-02-11T13:36:35 BRT" finished-at="2020-02-11T13:36:36 BRT">
           <params>
             <param index="0">
               <value>
@@ -30,15 +30,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fechaApp -->
-        <test-method status="PASS" signature="iniciaApp()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="iniciaApp" is-config="true" duration-ms="7794" started-at="2020-02-07T22:32:16 BRT" finished-at="2020-02-07T22:32:24 BRT">
+        <test-method status="PASS" signature="iniciaApp()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="iniciaApp" is-config="true" duration-ms="6347" started-at="2020-02-11T13:36:36 BRT" finished-at="2020-02-11T13:36:42 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iniciaApp -->
-        <test-method status="PASS" signature="BuscaSucesso()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="BuscaSucesso" duration-ms="3908" started-at="2020-02-07T22:32:24 BRT" finished-at="2020-02-07T22:32:28 BRT">
+        <test-method status="PASS" signature="BuscaSucesso()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="BuscaSucesso" duration-ms="7815" started-at="2020-02-11T13:36:42 BRT" finished-at="2020-02-11T13:36:50 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BuscaSucesso -->
-        <test-method status="PASS" signature="fechaApp(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="fechaApp" is-config="true" duration-ms="1385" started-at="2020-02-07T22:32:28 BRT" finished-at="2020-02-07T22:32:29 BRT">
+        <test-method status="PASS" signature="fechaApp(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="fechaApp" is-config="true" duration-ms="759" started-at="2020-02-11T13:36:50 BRT" finished-at="2020-02-11T13:36:51 BRT">
           <params>
             <param index="0">
               <value>
@@ -49,7 +49,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fechaApp -->
-        <test-method status="PASS" signature="finalizaReport()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="finalizaReport" is-config="true" duration-ms="447" started-at="2020-02-07T22:32:29 BRT" finished-at="2020-02-07T22:32:30 BRT">
+        <test-method status="PASS" signature="finalizaReport()[pri:0, instance:br.com.rsinet.Appium_Project.ProjetoAppium.BuscaTest@3cb1ffe6]" name="finalizaReport" is-config="true" duration-ms="396" started-at="2020-02-11T13:36:51 BRT" finished-at="2020-02-11T13:36:51 BRT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finalizaReport -->

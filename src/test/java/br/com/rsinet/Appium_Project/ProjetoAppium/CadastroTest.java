@@ -84,7 +84,7 @@ public class CadastroTest {
 		CadastroScreen.scroll(driver);
 
 		CadastroScreen.pais(driver).click();
-		CadastroScreen.selecionarPais(driver).click();
+		LogInScreen.scrollAndClick(driver, "Brazil");
 
 		CadastroScreen.estado(driver).click();
 		CadastroScreen.estado(driver).sendKeys(ExcelData.estado);
@@ -132,7 +132,7 @@ public class CadastroTest {
 		CadastroScreen.scroll(driver);
 
 		CadastroScreen.pais(driver).click();
-		CadastroScreen.selecionarPais(driver).click();
+		LogInScreen.scrollAndClick(driver, "Brazil");
 
 		CadastroScreen.estado(driver).click();
 		CadastroScreen.estado(driver).sendKeys(ExcelData.estado);
